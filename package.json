@@ -13,17 +13,22 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4",
-    "concurrently": "^6.0.0"
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.15"
   },
   "scripts": {
     "lint": "eslint ./src --fix",
     "react-start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "setup": "npm i && (cd server && npm i)",
+    "build": "react-scripts build",
     "dev": "cd server && node src/server.js",
     "client": "npm run react-start",
     "start": "concurrently \"npm run dev\" \"npm run client\""
