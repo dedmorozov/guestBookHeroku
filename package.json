@@ -29,9 +29,9 @@
     "deploy": "gh-pages -d build",
     "setup": "npm i && (cd server && npm i)",
     "build": "react-scripts build",
-    "dev": "cd server && node src/server.js",
     "client": "npm run react-start",
-    "start": "concurrently \"npm run dev\" \"npm run client\""
+    "dev": "cd server && node src/server.js",
+    "start": "concurrently \"npm run client\" \"npm run dev\""
   },
   "eslintConfig": {
     "extends": [
