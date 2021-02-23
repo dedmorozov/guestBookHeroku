@@ -7,11 +7,14 @@ const initDatabase = require('./modules/database/database.entity');
 
 const PORT = process.env.PORT || 4000;
 
+var distDir = __dirname + "/build/";
+
 const startServer = async () => {
   const app = express();
 
   app.use(cors('*'));
-  app.use(express.json());
+  app.use(express.static(distDir));
+  // app.use(express.json());
 
   await initDatabase();
   initCommentRoutes(app);
